@@ -53,10 +53,20 @@ go.click()
 # slider = EC.element_to_be_clickable((By.CSS_SELECTOR, '.ui-slider-handle ui-state-default ui-corner-all'))
 # move.click_and_hold(slider).move_by_offset(100, 100).release().perform()
 
+print("Слайдер")
+source = driver.find_element_by_xpath('//*[@id="map-zoom-slider"]/a')
+print("Нашел слайдер")
 
-source = driver.find_elements_by_xpath('//*[@id="map-zoom-slider"]/a')
-target = driver.find_elements_by_xpath('//*[@id="box103"]')
+# target = driver.find_element_by_xpath('//*[@id="box103"]')
 action = ActionChains(driver)
-action.drag_and_drop(source, target).perform()
+# action.drag_and_drop(source, target).perform()
+xOffset = 100
+yOffset = 100
+# xOffset = 100
+# yOffset = 0
+# xOffset = 0
+# yOffset = 100
+print("Перед перемещением")
+action.drag_and_drop_by_offset(source, xOffset, yOffset)
 # move.click_and_hold(source).move_by_offset(-200, 0).release().perform()
 print("Выполнилось")
