@@ -40,19 +40,7 @@ z.send_keys("0")
 sleep(1)
 go = driver.find_element_by_id('map-goto-go')
 move = ActionChains(driver)
-# slider = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div[1]/article/div[1]/div/div[1]/div/div[7]/div/div[2]/div/a")
-# driver.executeScript("document.getElementById('navbar').style.display='block'");
 go.click()
-# map = driver.find_element_by_id('map-canvas')
-# big_slider = driver.find_element_by_class_name("ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all")
-# slider = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div[1]/article/div[1]/div/div[1]/div/div[7]/div/div[2]/div/a")
-# wheel_element(map, -120)
-# move.click_and_hold(big_slider).move_by_offset(10, 0).release().perform()
-
-# wait = WebDriverWait(driver, 2)
-# slider = EC.element_to_be_clickable((By.CSS_SELECTOR, '.ui-slider-handle ui-state-default ui-corner-all'))
-# move.click_and_hold(slider).move_by_offset(100, 100).release().perform()
-
 print("Слайдер")
 source = driver.find_element_by_xpath('//*[@id="map-zoom-slider"]/a')
 print("Нашел слайдер")
@@ -62,10 +50,6 @@ action = ActionChains(driver)
 # action.drag_and_drop(source, target).perform()
 xOffset = 100
 yOffset = 100
-# xOffset = 100
-# yOffset = 0
-# xOffset = 0
-# yOffset = 100
 print("Перед перемещением")
 action.drag_and_drop_by_offset(source, xOffset, yOffset)
 # move.click_and_hold(source).move_by_offset(-200, 0).release().perform()
